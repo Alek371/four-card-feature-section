@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+:root {
+  --Red: hsl(0, 78%, 62%);
+  --Cyan: hsl(180, 62%, 55%);
+  --Orange: hsl(34, 97%, 64%);
+  --Blue: hsl(212, 86%, 64%);
+  --Very-Dark-Blue: hsl(234, 12%, 34%);
+  --Grayish-Blue: hsl(229, 6%, 66%);
+  --Very-Light-Gray: hsl(0, 0%, 98%);
+  --Very-Light-Gray-BG: hsl(0, 0%, 95%);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  width: 100vw;
+  min-height: 100vh;
+  flex-direction: column;
+  font-size: 15px;
+  background-color: var(--Very-Light-Gray-BG);
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  min-height: 300px;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 50px 0;
+}
+
+header h1 {
+  color: var(--Grayish-Blue);
+  font-weight: 400;
+  font-size: 32px;
+}
+
+header h2 {
+  font-weight: 600;
+  font-size: 32px;
+}
+
+header p {
+  width: 500px;
+  text-align: center;
+  font-weight: 400;
+  color: var(--Very-Dark-Blue);
+  line-height: 1.5;
+}
+
+main {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+}
+
+.comp {
+  min-width: 250px;
+  max-width: 400px;
+  min-height: 250px;
+  background-color: var(--Very-Light-Gray);
+  padding: 25px 40px;
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: -1px 24px 55px -29px rgba(66, 68, 90, 1);
+}
+
+.comp h3 {
+  font-size: 20px;
+  font-size: 400;
+  margin: 0 0 15px 0;
+}
+.comp p {
+  font-size: 200;
+  color: var(--Grayish-Blue);
+  line-height: 1.5;
+}
+
+.comp img {
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
+}
+
+.comp::after {
+  content: "";
+  height: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-radius: 15px;
+}
+
+.comp-cyan::after {
+  background-color: var(--Cyan);
+}
+
+.comp-red::after {
+  background-color: var(--Red);
+}
+
+.comp-blue::after {
+  background-color: var(--Blue);
+}
+
+.comp-orange::after {
+  background-color: var(--Orange);
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 42vw;
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+  }
+
+  main {
+    flex-direction: column;
+  }
+
+  header {
+    width: 350px;
+  }
+
+  header h1 {
+    font-size: 25px;
+    text-align: center;
+  }
+
+  header h2 {
+    font-size: 25px;
+  }
+
+  header p {
+    width: 300px;
+    text-align: center;
+  }
+
+  footer {
+    position: static;
+  }
+}
